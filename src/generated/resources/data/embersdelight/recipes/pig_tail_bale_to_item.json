@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embersdelight:pig_tail_bale"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "embersdelight:pig_tail"
+  }
+}

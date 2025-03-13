@@ -8,6 +8,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.RegistryObject;
 import net.sirplop.embersdelight.EDRegistry;
 import net.sirplop.embersdelight.EmbersDelight;
+import net.sirplop.embersdelight.compat.AetherworksCompat;
 
 public class EDItemModels extends ItemModelProvider {
 
@@ -19,6 +20,27 @@ public class EDItemModels extends ItemModelProvider {
     protected void registerModels() {
 
         itemWithTexture(EDRegistry.PLUMP_HELMET, "plump_helmet");
+        itemWithTexture(EDRegistry.PLUMP_HELMET_SEED, "plump_helmet_seed");
+        itemWithTexture(EDRegistry.PIG_TAIL, "pig_tail");
+        itemWithTexture(EDRegistry.PIG_TAIL_SEED, "pig_tail_seed");
+
+        toolWithTexture(EDRegistry.SILVER_KNIFE, "silver_knife");
+        toolWithTexture(EDRegistry.DAWNSTONE_KNIFE, "dawnstone_knife");
+        //toolWithTexture(EDRegistry.CLOCKWORK_KNIFE, "clockwork_knife");
+
+        itemWithTexture(EDRegistry.EMBER_GRITS, "ember_grits");
+        itemWithTexture(EDRegistry.PLUMP_HELMET_CUT, "plump_helmet_cuts");
+        itemWithTexture(EDRegistry.STUFFED_HELMET, "stuffed_helmet");
+        itemWithTexture(EDRegistry.CINDER_DONUT, "cinder_donut");
+        itemWithTexture(EDRegistry.FIVE_FUNGUS_FAJITA, "five_fungus_fajita");
+        itemWithTexture(EDRegistry.PLUMP_ROAST, "plump_roast");
+        itemWithTexture(EDRegistry.GILDED_GREENS, "gilded_greens");
+        itemWithTexture(EDRegistry.ROCK_CANDY, "rock_candy");
+        itemWithTexture(EDRegistry.SPICY_MEATBALLS, "spicy_meatballs");
+        itemWithTexture(EDRegistry.TRANSMOG_MEAT, "transmog_meat");
+        itemWithTexture(EDRegistry.COOKED_TRANSMOG_MEAT, "cooked_transmog_meat");
+
+        itemWithTexture(AetherworksCompat.AETHER_COLADA, "aether_colada");
     }
 
     public void itemWithTexture(RegistryObject<? extends Item> registryObject, String texture) {

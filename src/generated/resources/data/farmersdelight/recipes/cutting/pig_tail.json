@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "embersdelight:pig_tail"
+    }
+  ],
+  "result": [
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "farmersdelight:straw"
+    },
+    {
+      "item": "embersdelight:pig_tail_seed"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}

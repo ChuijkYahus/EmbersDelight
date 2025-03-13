@@ -1,0 +1,14 @@
+{
+  "block.cutter.loop": {
+    "sounds": [
+      "embersdelight:cutter_loop"
+    ],
+    "subtitle": "subtitles.embersdelight.block.cutter.loop"
+  },
+  "block.cutter.stop": {
+    "sounds": [
+      "embersdelight:cutter_stop"
+    ],
+    "subtitle": "subtitles.embersdelight.block.cutter.stop"
+  }
+}

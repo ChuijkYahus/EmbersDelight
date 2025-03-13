@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    [
+      {
+        "item": "farmersdelight:cooked_bacon"
+      },
+      {
+        "item": "embersdelight:cooked_transmog_meat"
+      }
+    ],
+    [
+      {
+        "item": "farmersdelight:cooked_bacon"
+      },
+      {
+        "item": "embersdelight:cooked_transmog_meat"
+      }
+    ],
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "tag": "forge:cooked_eggs"
+    },
+    {
+      "tag": "forge:cooked_eggs"
+    }
+  ],
+  "result": {
+    "item": "farmersdelight:bacon_and_eggs"
+  }
+}

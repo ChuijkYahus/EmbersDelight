@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embersdelight:plump_helmet_crate"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "embersdelight:plump_helmet"
+  }
+}

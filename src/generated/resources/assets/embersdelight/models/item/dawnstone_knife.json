@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "embersdelight:item/dawnstone_knife"
+  }
+}

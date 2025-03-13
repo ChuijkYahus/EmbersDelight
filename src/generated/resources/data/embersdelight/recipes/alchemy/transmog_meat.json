@@ -1,0 +1,28 @@
+{
+  "type": "embers:alchemy",
+  "aspects": [
+    {
+      "tag": "embers:aspectus/dawnstone"
+    },
+    {
+      "tag": "embers:aspectus/lead"
+    }
+  ],
+  "inputs": [
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "embers:ash"
+    },
+    {
+      "item": "embers:ember_grit"
+    }
+  ],
+  "output": {
+    "item": "embersdelight:transmog_meat"
+  },
+  "tablet": {
+    "tag": "forge:foods/raw_meat"
+  }
+}

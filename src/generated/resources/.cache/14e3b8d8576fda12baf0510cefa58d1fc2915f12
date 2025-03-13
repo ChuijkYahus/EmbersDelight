@@ -1,0 +1,5 @@
+// 1.20.1	2025-03-08T13:35:00.1402027	Tags for minecraft:block mod id embersdelight
+69c11889e9aad109183ab5b186e70bf960defd11 data/embers/tags/blocks/mech_core_proxyable/top.json
+69c11889e9aad109183ab5b186e70bf960defd11 data/forge/tags/blocks/relocation_not_supported.json
+8d4acd58436cf618414ec4e41455df07a08d6c56 data/minecraft/tags/blocks/crops.json
+69c11889e9aad109183ab5b186e70bf960defd11 data/minecraft/tags/blocks/mineable/pickaxe.json

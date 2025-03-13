@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "embersdelight:block/pig_tail_bale",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "embersdelight:block/pig_tail_bale",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "embersdelight:block/pig_tail_bale",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "embersdelight:block/pig_tail_bale",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "embersdelight:block/pig_tail_bale"
+    },
+    "facing=west": {
+      "model": "embersdelight:block/pig_tail_bale",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

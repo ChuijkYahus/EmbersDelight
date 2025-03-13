@@ -1,0 +1,16 @@
+{
+  "type": "embers:stamping",
+  "fluid": {
+    "amount": 80,
+    "fluid": "embers:molten_gold"
+  },
+  "input": {
+    "item": "farmersdelight:mixed_salad"
+  },
+  "output": {
+    "item": "embersdelight:gilded_greens"
+  },
+  "stamp": {
+    "item": "embers:nugget_stamp"
+  }
+}

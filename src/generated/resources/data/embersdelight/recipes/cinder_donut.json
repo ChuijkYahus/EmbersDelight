@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "embers:ember_grit"
+    },
+    "M": {
+      "tag": "forge:milk"
+    },
+    "W": {
+      "item": "minecraft:wheat"
+    }
+  },
+  "pattern": [
+    " G ",
+    "WMW"
+  ],
+  "result": {
+    "item": "embersdelight:cinder_donut"
+  },
+  "show_notification": true
+}

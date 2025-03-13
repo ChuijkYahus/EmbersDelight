@@ -1,0 +1,20 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "embersdelight:plump_helmet"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "tag": "forge:salad_ingredients/cabbage"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "embersdelight:plump_roast"
+  }
+}

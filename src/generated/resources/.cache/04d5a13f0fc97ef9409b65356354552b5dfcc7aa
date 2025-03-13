@@ -1,0 +1,22 @@
+// 1.20.1	2025-03-13T13:40:17.0620682	Tags for minecraft:item mod id embersdelight
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_bacon.json
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_beef.json
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_chicken.json
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_fishes.json
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_fishes/cod.json
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_fishes/salmon.json
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_mutton.json
+d955b483abcf7b0ac21925cd06fef67051be4874 data/forge/tags/items/cooked_pork.json
+300985e481393a59abb0f7bf5a1542c36da54fba data/forge/tags/items/foods/cooked_meat.json
+e4c7ed7bb1d99f8212195b994ef559d02ae25b1e data/forge/tags/items/foods/raw_meat.json
+c09379a8348bab9ebc4eaf26bc65a63e75037c7a data/forge/tags/items/mushrooms.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_bacon.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_beef.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_chicken.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_fishes.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_fishes/cod.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_fishes/salmon.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_fishes/tropical_fish.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_mutton.json
+5448d178cb51f5dfb913f65588a31e6f467dfbea data/forge/tags/items/raw_pork.json
+c1557d44b3fed7fced53c1b8e6a5fd0d5dff999a data/forge/tags/items/tools/knives.json

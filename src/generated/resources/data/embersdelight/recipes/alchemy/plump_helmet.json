@@ -1,0 +1,28 @@
+{
+  "type": "embers:alchemy",
+  "aspects": [
+    {
+      "tag": "embers:aspectus/iron"
+    },
+    {
+      "tag": "embers:aspectus/silver"
+    }
+  ],
+  "inputs": [
+    {
+      "item": "minecraft:red_mushroom"
+    },
+    {
+      "item": "embers:ash"
+    },
+    {
+      "item": "embers:ember_grit"
+    }
+  ],
+  "output": {
+    "item": "embersdelight:plump_helmet"
+  },
+  "tablet": {
+    "item": "farmersdelight:brown_mushroom_colony"
+  }
+}

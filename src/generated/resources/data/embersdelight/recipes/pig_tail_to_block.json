@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    },
+    {
+      "item": "embersdelight:pig_tail"
+    }
+  ],
+  "result": {
+    "item": "embersdelight:pig_tail_bale"
+  }
+}

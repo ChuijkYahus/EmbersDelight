@@ -1,37 +1,28 @@
 package net.sirplop.embersdelight;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
+import com.rekindled.embers.datagen.EmbersSounds;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.material.MapColor;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.data.event.GatherDataEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
-import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
-import net.sirplop.embersdelight.datagen.EDItemModels;
+import net.sirplop.embersdelight.blockentity.render.CutterTopBlockEntityRenderer;
+import net.sirplop.embersdelight.client.EDClientEvents;
+import net.sirplop.embersdelight.compat.AetherworksCompat;
+import net.sirplop.embersdelight.datagen.*;
 import org.slf4j.Logger;
 
 import java.util.concurrent.CompletableFuture;
@@ -53,8 +44,18 @@ public class EmbersDelight
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::gatherData);
 
+        EDRegistry.BLOCKS.register(modEventBus);
         EDRegistry.ITEMS.register(modEventBus);
+        EDRegistry.BLOCK_ENTITY_TYPES.register(modEventBus);
+        EDRegistry.SOUND_EVENTS.register(modEventBus);
         EDRegistry.CREATIVE_MODE_TAB.register(modEventBus);
+        EDSounds.init();
+
+        EDConfig.register();
+
+        if (ModList.get().isLoaded("aetherworks")) {
+            AetherworksCompat.init();
+        }
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
@@ -63,6 +64,7 @@ public class EmbersDelight
     private void commonSetup(final FMLCommonSetupEvent event)
     {
         LOGGER.info("Stuffing face with Ember Crystals... Yummy!");
+        event.enqueueWork(EDResearch::initResearch);
     }
 
 
@@ -74,21 +76,33 @@ public class EmbersDelight
 
         if (event.includeClient()) {
             gen.addProvider(true, new EDItemModels(output, existingFileHelper));
-            //gen.addProvider(true, new EDBlockStates(output, existingFileHelper));
-            //gen.addProvider(true, new EDSounds(output, existingFileHelper));
+            gen.addProvider(true, new EDBlockStates(output, existingFileHelper));
+            gen.addProvider(true, new EDSounds(output, existingFileHelper));
+        }
+        if (event.includeServer()) {
+            gen.addProvider(true, new EDLootTables(output));
+            gen.addProvider(true, new EDRecipes(output));
+            BlockTagsProvider blockTags = new EDBlockTags(output, lookupProvider, existingFileHelper);
+            gen.addProvider(true, blockTags);
+            gen.addProvider(true, new EDItemTags(output, lookupProvider, blockTags.contentsGetter(), existingFileHelper));
         }
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
-    public static class ClientModEvents
-    {
+    public static class ClientModEvents {
+
+        @OnlyIn(Dist.CLIENT)
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            // Some client setup code
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        @SuppressWarnings("removal")
+        public static void clientSetup(FMLClientSetupEvent event) {
+            IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+            modEventBus.addListener(EDClientEvents::afterModelBake);
+        }
+
+        @OnlyIn(Dist.CLIENT)
+        @SubscribeEvent
+        static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(EDRegistry.CUTTER_TOP_ENTITY.get(), CutterTopBlockEntityRenderer::new);
         }
     }
 }

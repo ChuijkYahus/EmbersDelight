@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "half=lower,waterlogged=false": {
+      "model": "embersdelight:block/cutter_bottom"
+    },
+    "half=lower,waterlogged=true": {
+      "model": "embersdelight:block/cutter_bottom"
+    },
+    "half=upper,waterlogged=false": {
+      "model": "embersdelight:block/cutter_top"
+    },
+    "half=upper,waterlogged=true": {
+      "model": "embersdelight:block/cutter_top"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_plump_helmet": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "embersdelight:plump_helmet"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "embersdelight:five_fungus_fajita"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_plump_helmet",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "embersdelight:five_fungus_fajita"
+    ]
+  },
+  "sends_telemetry_event": false
+}

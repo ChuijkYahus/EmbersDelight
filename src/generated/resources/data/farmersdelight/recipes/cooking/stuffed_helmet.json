@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "embersdelight:plump_helmet"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "tag": "forge:cooked_beef"
+    },
+    {
+      "tag": "forge:vegetables/tomato"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "embersdelight:stuffed_helmet"
+  }
+}

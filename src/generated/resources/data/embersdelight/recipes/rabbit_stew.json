@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    [
+      {
+        "item": "minecraft:cooked_rabbit"
+      },
+      {
+        "item": "embersdelight:cooked_transmog_meat"
+      }
+    ],
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    [
+      {
+        "item": "minecraft:brown_mushroom"
+      },
+      {
+        "item": "minecraft:red_mushroom"
+      },
+      {
+        "item": "embersdelight:plump_helmet"
+      },
+      {
+        "item": "embersdelight:plump_helmet_cut"
+      }
+    ]
+  ],
+  "result": {
+    "item": "minecraft:rabbit_stew"
+  }
+}

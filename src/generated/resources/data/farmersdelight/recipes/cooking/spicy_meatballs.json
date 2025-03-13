@@ -1,0 +1,34 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    [
+      {
+        "item": "farmersdelight:minced_beef"
+      },
+      {
+        "item": "embersdelight:transmog_meat"
+      }
+    ],
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "item": "farmersdelight:tomato_sauce"
+    },
+    {
+      "item": "embers:ember_grit"
+    },
+    {
+      "item": "embers:ember_grit"
+    },
+    {
+      "item": "embers:ember_grit"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "embersdelight:spicy_meatballs"
+  }
+}

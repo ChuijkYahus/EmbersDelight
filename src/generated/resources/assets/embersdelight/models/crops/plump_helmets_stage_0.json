@@ -1,0 +1,7 @@
+{
+  "parent": "embersdelight:block/crop_wide_center",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "crop": "embersdelight:block/crops/plump_helmets_stage_0"
+  }
+}

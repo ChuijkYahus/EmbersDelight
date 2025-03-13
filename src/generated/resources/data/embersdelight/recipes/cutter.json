@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:iron_bars"
+    },
+    "C": {
+      "item": "embers:caminite_bricks"
+    },
+    "O": {
+      "tag": "forge:plates/copper"
+    },
+    "P": {
+      "tag": "forge:plates/iron"
+    },
+    "U": {
+      "item": "minecraft:stonecutter"
+    }
+  },
+  "pattern": [
+    "CPC",
+    "OUO",
+    "CBC"
+  ],
+  "result": {
+    "item": "embersdelight:cutter"
+  },
+  "show_notification": true
+}

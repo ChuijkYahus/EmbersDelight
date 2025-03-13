@@ -1,0 +1,21 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 400,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "tag": "forge:cobblestone"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "embers:ember_grit"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 8,
+    "item": "embersdelight:rock_candy"
+  }
+}

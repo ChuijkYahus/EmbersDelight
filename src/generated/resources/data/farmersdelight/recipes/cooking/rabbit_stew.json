@@ -1,0 +1,42 @@
+{
+  "type": "farmersdelight:cooking",
+  "container": {
+    "item": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "minecraft:baked_potato"
+    },
+    [
+      {
+        "item": "minecraft:rabbit"
+      },
+      {
+        "item": "embersdelight:transmog_meat"
+      }
+    ],
+    {
+      "item": "minecraft:carrot"
+    },
+    [
+      {
+        "item": "minecraft:brown_mushroom"
+      },
+      {
+        "item": "minecraft:red_mushroom"
+      },
+      {
+        "item": "embersdelight:plump_helmet"
+      },
+      {
+        "item": "embersdelight:plump_helmet_cut"
+      }
+    ]
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "minecraft:rabbit_stew"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 100,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "embers:ember_grit"
+    }
+  ],
+  "recipe_book_tab": "misc",
+  "result": {
+    "item": "embersdelight:ember_grits"
+  }
+}

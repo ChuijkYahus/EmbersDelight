@@ -1,0 +1,28 @@
+{
+  "type": "embers:alchemy",
+  "aspects": [
+    {
+      "tag": "embers:aspectus/copper"
+    },
+    {
+      "tag": "embers:aspectus/silver"
+    }
+  ],
+  "inputs": [
+    {
+      "item": "minecraft:string"
+    },
+    {
+      "item": "embers:ash"
+    },
+    {
+      "item": "embers:ember_grit"
+    }
+  ],
+  "output": {
+    "item": "embersdelight:pig_tail"
+  },
+  "tablet": {
+    "item": "farmersdelight:rice_panicle"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "embersdelight:plump_helmet"
+    }
+  ],
+  "result": [
+    {
+      "count": 2,
+      "item": "embersdelight:plump_helmet_cut"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  }
+}
