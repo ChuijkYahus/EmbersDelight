@@ -1,1 +1,0 @@
-An Minecraft addon for Embers Rekindled and Farmer's Delight, adding new crops and food and stuff.
