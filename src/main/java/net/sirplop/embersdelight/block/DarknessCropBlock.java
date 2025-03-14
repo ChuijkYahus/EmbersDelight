@@ -16,8 +16,8 @@ public class DarknessCropBlock extends CropBlock {
     @Override
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
         BlockPos blockpos = pPos.below();
-        return (pLevel.getRawBrightness(pPos, 0) <= 8 || !pLevel.canSeeSky(pPos.above())) &&
-                pState.getBlock() == this ? pLevel.getBlockState(blockpos).canSustainPlant(pLevel, blockpos, Direction.UP, this) : this.mayPlaceOn(pLevel.getBlockState(blockpos), pLevel, blockpos);
+        BlockState blockstate = pLevel.getBlockState(blockpos);
+        return pLevel.getRawBrightness(pPos, 0) < 13 && blockstate.canSustainPlant(pLevel, blockpos, Direction.UP, this);
     }
 
     @Override

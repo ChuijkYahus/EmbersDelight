@@ -3,6 +3,7 @@ package net.sirplop.embersdelight;
 import com.rekindled.embers.RegistryManager;
 import com.rekindled.embers.datagen.EmbersSounds;
 import com.rekindled.embers.util.EmbersTiers;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvent;
@@ -23,6 +24,7 @@ import net.sirplop.embersdelight.block.PlumpHelmetCropBlock;
 import net.sirplop.embersdelight.blockentity.CutterBottomBlockEntity;
 import net.sirplop.embersdelight.blockentity.CutterTopBlockEntity;
 import net.sirplop.embersdelight.item.ClockworkKnifeItem;
+import net.sirplop.embersdelight.item.TooltipBlockItem;
 import vectorwing.farmersdelight.common.block.RiceBaleBlock;
 import vectorwing.farmersdelight.common.item.ConsumableItem;
 import vectorwing.farmersdelight.common.item.KnifeItem;
@@ -73,8 +75,8 @@ public class EDRegistry {
     public static final RegistryObject<Block> PIG_TAIL_CROP = BLOCKS.register("pig_tail",
             () -> new PigTailCropBlock(Block.Properties.copy(Blocks.WHEAT)));
 
-    public static final RegistryObject<Item> PLUMP_HELMET_SEED = ITEMS.register("plump_helmet_seed", () -> new ItemNameBlockItem(PLUMP_HELMET_CROP.get(), basicItem()));
-    public static final RegistryObject<Item> PIG_TAIL_SEED = ITEMS.register("pig_tail_seed", () -> new ItemNameBlockItem(PIG_TAIL_CROP.get(), basicItem()));
+    public static final RegistryObject<Item> PLUMP_HELMET_SEED = ITEMS.register("plump_helmet_seed", () -> new TooltipBlockItem(PLUMP_HELMET_CROP.get(), basicItem(), "embersdelight.tooltip.dark_crop", ChatFormatting.DARK_GRAY, false));
+    public static final RegistryObject<Item> PIG_TAIL_SEED = ITEMS.register("pig_tail_seed", () -> new TooltipBlockItem(PIG_TAIL_CROP.get(), basicItem(), "embersdelight.tooltip.dark_crop", ChatFormatting.DARK_GRAY, false));
     public static final RegistryObject<Item> PLUMP_HELMET = ITEMS.register("plump_helmet", () -> new Item(foodItem(EDFoodValues.PLUMP_HELMET)));
     public static final RegistryObject<Item> PIG_TAIL = ITEMS.register("pig_tail", () -> new Item(basicItem()));
 
@@ -85,13 +87,13 @@ public class EDRegistry {
 
     //Foods
     public static final RegistryObject<Item> EMBER_GRITS = ITEMS.register("ember_grits", () -> new Item(bowlFoodItem(EDFoodValues.EMBER_GRITS)));
-    public static final RegistryObject<Item> STUFFED_HELMET = ITEMS.register("stuffed_helmet", () -> new ConsumableItem(foodItem(EDFoodValues.STUFFED_HELMET), true));
     public static final RegistryObject<Item> CINDER_DONUT = ITEMS.register("cinder_donut", () -> new Item(foodItem(EDFoodValues.CINDER_DONUT)));
-    public static final RegistryObject<Item> FIVE_FUNGUS_FAJITA = ITEMS.register("five_fungus_fajita", () -> new ConsumableItem(foodItem(EDFoodValues.FIVE_FUNGUS_FAJITA), true));
-    public static final RegistryObject<Item> PLUMP_ROAST = ITEMS.register("plump_roast", () -> new Item(bowlFoodItem(EDFoodValues.PLUMP_ROAST)));
-    public static final RegistryObject<Item> GILDED_GREENS = ITEMS.register("gilded_greens", () -> new ConsumableItem(bowlFoodItem(EDFoodValues.GILDED_GREENS), true));
     public static final RegistryObject<Item> ROCK_CANDY = ITEMS.register("rock_candy", () -> new Item(foodItem(EDFoodValues.ROCK_CANDY)));
+    public static final RegistryObject<Item> GILDED_GREENS = ITEMS.register("gilded_greens", () -> new ConsumableItem(bowlFoodItem(EDFoodValues.GILDED_GREENS), true));
+    public static final RegistryObject<Item> STUFFED_HELMET = ITEMS.register("stuffed_helmet", () -> new ConsumableItem(foodItem(EDFoodValues.STUFFED_HELMET), true));
+    public static final RegistryObject<Item> PLUMP_ROAST = ITEMS.register("plump_roast", () -> new Item(bowlFoodItem(EDFoodValues.PLUMP_ROAST)));
     public static final RegistryObject<Item> SPICY_MEATBALLS = ITEMS.register("spicy_meatballs", () -> new ConsumableItem(bowlFoodItem(EDFoodValues.SPICY_MEATBALLS), true));
+    public static final RegistryObject<Item> FIVE_FUNGUS_FAJITA = ITEMS.register("five_fungus_fajita", () -> new ConsumableItem(foodItem(EDFoodValues.FIVE_FUNGUS_FAJITA), true));
 
     //block entities
     public static final RegistryObject<BlockEntityType<CutterBottomBlockEntity>> CUTTER_BOTTOM_ENTITY = BLOCK_ENTITY_TYPES.register("cutter_bottom_block_entity", () -> BlockEntityType.Builder.of(CutterBottomBlockEntity::new, CUTTER.get()).build(null));

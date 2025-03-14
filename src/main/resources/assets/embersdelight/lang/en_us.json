@@ -31,9 +31,11 @@
 	"block.embersdelight.plump_helmet_crate" : "Plump Helmet Crate",
 	"block.embersdelight.pig_tail_bale" : "Pig Tail Bale",
 
+	"embersdelight.tooltip.dark_crop" : "§oGrows in light level < 13",
+
 	"embers.research.page.ed.foodstuff" : "Alchemical Crops",
 	"embers.research.page.ed.foodstuff.title" : "A Dash of Ash",
-	"embers.research.page.ed.foodstuff.desc" : "By applying the a small amount of ash to select plants and broiling them with Ember, you've sucessfully created new crops to grow. These crops seem to shun the sun, and prefer the darker depths of the underground.",
+	"embers.research.page.ed.foodstuff.desc" : "By applying the a small amount of ash to select plants and broiling them with Ember, you've sucessfully created new crops to grow. These crops seem to shun the light, and prefer the darker depths of the underground.",
 
 	"embers.research.page.ed.meatstuff" : "Alchemical Meat",
 	"embers.research.page.ed.meatstuff.title" : "A Splash of Body Horror",
