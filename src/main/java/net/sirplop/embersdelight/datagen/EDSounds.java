@@ -35,5 +35,5 @@ public class EDSounds extends SoundDefinitionsProvider {
     public void withSubtitle(RegistryObject<SoundEvent> soundEvent, SoundDefinition definition) {
         add(soundEvent, definition.subtitle("subtitles." + EmbersDelight.MODID + "." + soundEvent.getId().getPath()));
     }
-    public static ResourceLocation resource(String path) { return ResourceLocation.fromNamespaceAndPath(EmbersDelight.MODID, path); }
+    public static ResourceLocation resource(String path) { return ResourceLocation.tryBuild(EmbersDelight.MODID, path); }
 }

@@ -23,6 +23,7 @@ import net.sirplop.embersdelight.blockentity.render.CutterTopBlockEntityRenderer
 import net.sirplop.embersdelight.client.EDClientEvents;
 import net.sirplop.embersdelight.compat.AetherworksCompat;
 import net.sirplop.embersdelight.datagen.*;
+import org.openjdk.nashorn.internal.ir.annotations.Ignore;
 import org.slf4j.Logger;
 
 import java.util.concurrent.CompletableFuture;
@@ -36,9 +37,10 @@ public class EmbersDelight
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public EmbersDelight(FMLJavaModLoadingContext context)
+    @SuppressWarnings("removal")
+    public EmbersDelight()
     {
-        IEventBus modEventBus = context.getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
@@ -63,7 +65,7 @@ public class EmbersDelight
 
     private void commonSetup(final FMLCommonSetupEvent event)
     {
-        LOGGER.info("Stuffing face with Ember Crystals... Yummy!");
+        LOGGER.atInfo().log("Stuffing face with Ember Crystals... Yummy!");
         event.enqueueWork(EDResearch::initResearch);
     }
 
